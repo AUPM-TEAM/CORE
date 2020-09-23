@@ -1,0 +1,5 @@
+name: Core
+author: UnNyanCat
+version: 0.1
+main: UnNyanCat\Core\Main
+api: [3.0.0]
