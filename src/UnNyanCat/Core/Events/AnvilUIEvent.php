@@ -7,6 +7,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\item\Armor;
 use pocketmine\Player;
+use pocketmine\Server;
 use pocketmine\utils\TextFormat;
 
 class AnvilUIEvent implements Listener
@@ -22,7 +23,7 @@ class AnvilUIEvent implements Listener
 
     public function openForm(Player $player)
     {
-        $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
+        $api = Server::getInstance()->getPluginManager()->getPlugin("FormAPI");
         $form = new SimpleForm(function (Player $player, int $data = null) {
             $result = $data;
             if ($result === null) {
@@ -33,7 +34,7 @@ class AnvilUIEvent implements Listener
 
                     $index = $player->getInventory()->getHeldItemIndex();
                     $item = $player->getInventory()->getItem($index);
-                    if ($player->getXpLevel($player->getXpLevel() > 30)) {
+                    if ($player->getXpLevel() > 30) {
                         if ($item instanceof Armor) {
                             $player->getInventory()->setItem($index, $item->setDamage(0));
                             $player->setXpLevel($player->getXpLevel() - 30);
@@ -47,7 +48,7 @@ class AnvilUIEvent implements Listener
 
                     $index = $player->getInventory()->getHeldItemIndex();
                     $item = $player->getInventory()->getItem($index);
-                    if ($player->getXpLevel($player->getXpLevel() > 30)) {
+                    if ($player->getXpLevel() > 30) {
                         if ($item instanceof Armor) {
                             $player->getInventory()->setItem($index, $item->setDamage(0));
                             $player->setXpLevel($player->getXpLevel() - 30);
@@ -61,7 +62,7 @@ class AnvilUIEvent implements Listener
                 case "2":
                     $index = $player->getInventory()->getHeldItemIndex();
                     $item = $player->getInventory()->getItemInHand($index);
-                    if ($player->getXpLevel($player->getXpLevel() > 30)) {
+                    if ($player->getXpLevel() > 30) {
                         $player->getInventory()->setItem($index, $item->setDamage(0));
                         $player->setXpLevel($player->getXpLevel() - 30);
                         $player->sendMessage(TextFormat::RED . "Vous avez bien repair l'item");
@@ -71,7 +72,7 @@ class AnvilUIEvent implements Listener
                     break;
             }
         });
-        $form->setTitle(TextFormat::BLUE . "Arthazia");
+        $form->setTitle(TextFormat::RED . "Teranium");
         $form->setContent(TextFormat::GRAY . "Choisissez ce que vous voulez repair");
         $form->addButton(TextFormat::GOLD . "Outils");
         $form->addButton(TextFormat::GOLD . "Armure");

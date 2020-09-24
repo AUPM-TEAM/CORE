@@ -71,6 +71,7 @@ class Main extends PluginBase implements Listener
         $this->getServer()->getPluginManager()->registerEvents(new Events\ShowCoordsEvent(),$this);
         $this->getServer()->getPluginManager()->registerEvents(new Events\FarmArmorEvent(),$this);
         $this->getServer()->getPluginManager()->registerEvents(new Events\HammerEvent(),$this);
+        $this->getServer()->getPluginManager()->registerEvents(new Events\AnvilUIEvent(),$this);
 
         /**
          * COMMANDS
@@ -91,6 +92,8 @@ class Main extends PluginBase implements Listener
                 new Commands\RandomTeleportCommand("randomtp", "Teleport you in wild", '/randomtp', ['rtp','wild']),
 
                 new Commands\FurnaceCommand("furnace", "Furnace item in your hand", "/furnace"),
+
+                new Commands\AddXP("addxp", "Add xp !", "/addxp [number]"),
             ]
         );
 
