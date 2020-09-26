@@ -1,0 +1,22 @@
+---
+lang-version: 1
+
+command:
+  in_game: "§cVous devez faire cette commande en jeu"
+  player_not_found: "§cLe joueur avec le nom {player} n'existe pas"
+  not_found: "§cCommande inconnue... Merci d'utiliser /help pour voir la liste des commandes"
+
+  main:
+    default:
+      name: "home"
+      usage: "/home help"
+      desc: "Allows using home commands. alias : 'h'"
+      alias: ["h"]
+
+    admin:
+      name: "homeadmin"
+      usage: "/ha help"
+      desc: "Allows using admin home commands. alias : 'ha'"
+      alias: ["ha"]
+      admin_only: "§cSeulement les admins peuvent faire cette commande."
+...

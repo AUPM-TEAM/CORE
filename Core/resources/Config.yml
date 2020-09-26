@@ -1,0 +1,50 @@
+---
+# -- RankShop Config -- #
+
+# -- RankCosts -- #
+vip.cost: 50000
+vipplus.cost: 100000
+mvp.cost: 150000
+mvpplus.cost: 250000
+legendaire.cost: 400000
+# -- RankCosts -- #
+
+# -- RankShop Messages -- #
+#----#
+# VIP Messages
+vip.done: "§aVous avez bien acheté le grâde : §gVIP §a!"
+vip.bc: "§e(§b!§e) §r§a$player a acheté : §gVIP"
+vip.failed: "§cVous n'avez pas assez d'argent pour acheter le §gVIP !"
+#----#
+# VIP+ Messages
+vipplus.done: ""
+vipplus.bc: "§e(§b!§e) §r§a{player} a acheté : §gVIP+"
+vipplus.failed: "§cVous n'avez pas assez d'argent pour acheter le §gVIP !"
+#----#
+# MVP Messages
+mvp.done: ""
+mvp.bc: "§e(§b!§e) §r§a{player} a acheté : §gMVP"
+mvp.failed: "§cVous n'avez pas assez d'argent pour acheter le §gVIP !"
+#----#
+# MVP+ Messages
+mvpplus.done: ""
+mvpplus.bc: "§e(§b!§e) §r§a{player} a acheté : §gMVP+"
+mvpplus.failed: "§cVous n'avez pas assez d'argent pour acheter le §gVIP !"
+#----#
+# Legendary Messages
+legendary.done: ""
+legendary.bc: "§e(§b!§e) §r§a{player} a acheté : §gLegendary"
+legendary.failed: "§cVous n'avez pas assez d'argent pour acheter le §gVIP !"
+#----#
+higher.rank: "§cTu ne peux pas acheter plus haut que LEGENDARY"
+#----#
+# -- RankShop Messages -- #
+# -- RankShop Config -- #
+
+# -- HOMES CONFIG -- #
+config-home-version: "1.0"
+data-provider: "yaml"
+
+default-home-limit: 10
+# -- HOMES CONFIG -- #
+...
